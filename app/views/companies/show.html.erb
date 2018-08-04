@@ -1,0 +1,50 @@
+<p id="notice" style="color:darkgreen"><%= notice %></p>
+<div class="container">
+  <div><h2> <%= @company.name %>  <small style="color:indigo"><%=@company.notes.last.description if @company.notes.present?%></small></h2></div>
+  <div class="pull-right"><%= link_to 'Edit', edit_company_path(@company) %> |
+    <%= link_to 'Back', companies_path %> </div>
+  <div class="card">
+  <div class="card-head"><h5>Job Openings</h5></div>
+  <div class="card-body"><%@company.job_openings.each do |openings| %>
+    <div class="card">
+      <div class="card-head">
+        <h4><%=openings.title%> <small><%=openings.category%></small></h4></div>
+      <div class="card-body">
+      <%=openings.category%>
+        <%=openings.description%>
+      </div>
+    </div>
+<%end%>
+  </div>
+  </div>
+  <br>
+  <div class="card">
+    <h4>People at <%= @company.name %> </h4>
+  <div class="card">
+    <% @company.employees.each do |employee| %>
+      <div class="card">
+        <a href="<%= employee_path(employee) %>">
+        <h5><%= employee.name %></h5>
+          <%= employee.position %></a></div>
+      <br>
+    <% end %>
+  </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-head"><h5>Notes</h5></div>
+    <div class="card-body">
+      <%= form_tag notes_path,:method=>"post" do %>
+    <%= text_field_tag "note[description]"%>
+    <%= hidden_field_tag "note[company_id]",@company.id %>
+    <%=submit_tag "Submit"%>
+  <%end%>
+      <% @company.notes.each do |note| %>
+        <div class="card"><h5> <%= note.description %></h5></div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>

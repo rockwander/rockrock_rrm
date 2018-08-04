@@ -1,0 +1,78 @@
+
+<div class="container pipeline-show">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pipeline.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pipeline.description %>
+  <%= form_tag link_category_to_pipeline_path , :method => 'post' do %>
+
+    <div class="field">
+      <%=select_tag "category_id", options_for_select(Category.all.map{|s|[s.name, s.id]}) %>
+    </div>
+    <%=hidden_field_tag :id, @pipeline.id%>
+    <br>
+    <div class="actions">
+      <%= submit_tag %>
+    </div>
+  <%end%>
+  </p>
+<div class="categories-list">
+  <div class="menu-cards" id="regular-menu-card" >
+    <div class="row " >
+      <% @pipeline.categories.each do |category| %>
+        <div class="col-md-3" style="width:200px" >
+          <div class="card category-card" style="height:800px">
+            <div class="card-head" style="position: center">
+              <h5 class="category-title"> <%= category.name %>
+              <%= link_to '(e)', edit_category_path(category),:class => "edit_delete_icons" %>  <%= link_to '(-)', category, method: :delete, data: {confirm: 'Are you sure?'},:class => "edit_delete_icons" %></h5>
+              <p class="clearfix"></p>
+            </div>
+            <div class="card-body">
+
+
+                  <% category.companies.each do |company| %>
+
+                      <div class="card company-card">
+                        <%= link_to company.name, :controller => "companies", :action => "show", :id => company , :class => "company-title"%>
+                      </div>
+
+                    <hr>
+                  <% end %>
+
+
+            </div>
+            <div class="card-footer">
+              <%= form_tag link_company_to_category_path(category) , :method => 'post' do %>
+
+                <div class="field">
+                  <%=select_tag "company_id", options_for_select(Company.all.map{|s|[s.name, s.id]}) %>
+                </div>
+                <%=hidden_field_tag :id,category.id%>
+                <br>
+                <div class="actions">
+                  <%= submit_tag %>
+                </div>
+              <%end%>
+            </div>
+          </div>
+          <br>
+        </div>
+
+      <% end %>
+    </div>
+
+
+    <p class="clearfix"></p>
+  </div>
+  <div id="customNav" class="owl-nav"></div>
+</div>
+
+<%= link_to 'Edit', edit_pipeline_path(@pipeline) %> |
+<%= link_to 'Back', pipelines_path %>
+</div>

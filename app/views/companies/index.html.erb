@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Companies</h1>
+
+    <% @companies.each do |company| %>
+      <div class="card">
+        <div class="card-head">
+        <h3><%= company.name %></h3>
+          <%= company.phone %> | <%= company.email %>
+        </div>
+        <div class="card-body">
+        <%= company.glassdoor %>
+        <%= company.linkedin %>
+        <%= company.company_website %>
+        </div>
+        <div class="card-footer">
+        <%= link_to 'Show', company %>
+        <%= link_to 'Edit', edit_company_path(company) %>
+        <%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+  <br>
+    <% end %>
+
+
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>
+</div>

@@ -1,0 +1,37 @@
+// Place all the styles related to the Pipelines controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.pipeline-show{
+  .categories-list{
+    .card{background-color: #eeeeee;
+    .card-head{
+      text-align: center;
+      padding-top: 20px;
+      height: 60px;
+      .edit_delete_icons{
+        font-size: small;
+      }
+    }
+      .card-body{
+        align:center;
+
+
+        .company-card{
+          padding: 10px 40px;
+          text-align: center;
+
+          height:50px;
+          a{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          //width: 200px;
+        }
+      }
+    }
+
+
+  }
+}

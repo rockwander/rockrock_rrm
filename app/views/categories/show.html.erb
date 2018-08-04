@@ -1,0 +1,34 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+
+
+<%@category.companies.each do |company|%>
+<%= render company %>
+<%end%>
+
+<%= form_tag link_company_to_category_path(@category) , :method => 'post' do %>
+
+  <div class="field">
+    <%=select_tag "company_id", options_for_select(Company.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <%=hidden_field_tag :id,@category.id%>
+
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<%end%>
+</div>

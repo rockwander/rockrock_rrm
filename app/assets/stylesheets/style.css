@@ -1,0 +1,287 @@
+.active {
+    background-color:transparent !important;
+}
+
+.radio-input {
+    margin-right:00px;
+    margin-left:0px;
+    position:relative;
+    top:-5px;
+}
+
+.category_items li, .category_items div{
+//min-height: 40px;
+    padding: 2px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #595959;;
+}
+
+.head_color {
+
+    color: #2ebdab;
+    font-weight: 400;
+
+}
+
+.list_normal {
+    width:100%;
+}
+
+.menu-cards .card {
+    margin-left: 0.80%;
+
+}
+
+.menu-cards {
+    padding-top: 0px;
+    padding-bottom:2px;
+    position:relative;
+}
+.owl-prev {
+    position: absolute;
+    top: 40%;
+    left: -115px;
+    cursor: pointer;
+}
+.owl-next {
+    position: absolute;
+    top: 40%;
+    right: -115px;
+    cursor: pointer;
+}
+#customNav .owl-prev{
+    float:left;
+}
+
+#customNav .owl-next{
+    position: absolute;
+    right: -100px;
+}
+
+.list_normal li {
+    border-bottom:1px solid grey;
+}
+
+.list-group-item {
+    text-decoration:none;
+    color:#000;
+}
+
+.list-group-item.current {
+    background-color:#eee !important;
+}
+
+.food-image img {
+    width:30px;
+}
+
+.exportbtns label {
+    margin-top:5px;
+}
+
+.exportbtns .btn {
+    margin:5px 5px;
+}
+
+.login-form form .btn-round-green {
+    margin: 45px 0 10px 0 !important;
+}
+.btn1 {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.Order-Summary {
+    height:auto !important;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    padding:0 0 0 0;
+}
+
+.dropdown-menu > li > a {
+    padding: 10px;
+}
+
+.splash {
+    padding-right:40px !important;
+}
+
+a {
+    cursor:pointer !important;
+}
+body {
+    overflow-x:hidden;
+}
+
+.edit-icons a:hover{
+    cursor:pointer;
+    opacity:.8;
+}
+
+.edit-icons a:first-child {
+    padding-right:13px;
+}
+
+.reorderTable tbody tr td:first-child img:first-child {
+    padding-right: 10px;
+    width: 33px;
+}
+
+.custom-table tbody tr td {
+    padding-top:13px !important;
+    padding: 12px;
+}
+
+.plusbtn img {
+    margin-top:-4px;
+}
+
+.pic-img-table tr td:first-child img {
+    width:33px;
+    padding-right:10px;
+}
+
+.kitchen-table thead tr th:first-child {
+    padding-left: 0px;
+}
+.custom-table thead tr th:first-child {
+    padding-left: 10px;
+}
+
+.navbar-default .navbar-nav > li > a.active::after {
+    margin-left: 40%;
+    margin-top:-15px;
+}
+
+.nav > li > a {
+    padding: 4px 6px 16px 12px;
+    margin-right: 8px;
+}
+
+
+.selection-area {
+    padding-top:20px;
+}
+
+.selection-area label {
+    font-weight:600;
+}
+
+.selection-area .btn-div{
+    margin-top:30px;
+}
+
+.selection-area .btn-div .btn {
+    margin-left:15px !important;
+    margin-top:5px !important;
+}
+
+.card-head .exports h5 {
+    padding-top:10px;
+}
+
+.card-head .export-div .plusbtn,.card-head .print-div .plusbtn {
+    margin: 18px 2px 0 0;
+}
+
+.card-head .export-div h5,.card-head .print-div h5 {
+    padding-top: 12px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.menu-listimg {
+    width:26px;
+    padding:0;
+}
+
+@media screen and (max-width:768px){
+
+    .menu-listimg {
+        display:none;
+    }
+    .navbar-default .navbar-nav > li > a.active::after {
+        margin-left: 0%;
+        display:none;
+        margin-top:-15px;
+    }
+
+    .category_image {
+        display:block;
+        float:left;
+    }
+    .category_name {
+        width: 75%;
+        display: block;
+        float:left;
+        margin-top: 0px;
+    }
+
+    .navigation_text {
+        display:none;
+    }
+
+    .card-head .plusbtn {
+        margin: 5px -13px 0 0;
+    }
+
+    .entry_field label {
+        text-align: left;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #eee;
+    }
+
+    .sm-pad {
+        padding: 0 36px;
+    }
+
+    .table-responsive {
+        border:0px !important;
+    }
+
+    .selection-area label {
+        margin-top:10px;
+    }
+
+    .selection-area .btn-div .btn {
+        margin-left:0px !important;
+        margin-top:5px !important;
+    }
+
+    #customNav {
+        display:none;
+    }
+}
+
+.total-count-res{
+    padding-top:12px;
+    padding-right:10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 13px;
+}
+
+@media screen and (max-width:480px){
+    .btn1, .btn-gray {
+        width:100%;
+    }
+
+    .btn-div-residents {
+        width:100%;
+    }
+}
+
+@media screen and (min-width:769px)
+{
+
+    #seniors-staff {
+        margin-left:-10px;
+    }
+}
